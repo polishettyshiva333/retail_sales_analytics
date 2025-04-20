@@ -1,0 +1,23 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore log files
+*.log
+
+# Ignore virtual environments
+.env
+
+# Ignore data folder containing raw and processed data
+/data/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore IDE-specific folders
+.vscode/
+.idea/
+
+# Ignore Airflow logs
+orchestration/airflow_dags/logs/
+
