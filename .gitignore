@@ -21,3 +21,5 @@ __pycache__/
 # Ignore Airflow logs
 orchestration/airflow_dags/logs/
 
+# Ignore config file
+config/sales_config.yaml
