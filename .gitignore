@@ -13,6 +13,7 @@ __pycache__/
 
 # Ignore Jupyter checkpoints
 .ipynb_checkpoints/
+anaconda_projects/
 
 # Ignore IDE-specific folders
 .vscode/
