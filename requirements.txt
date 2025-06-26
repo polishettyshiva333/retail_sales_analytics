@@ -1,0 +1,10 @@
+snowsql
+xlrd
+snowflake-connector-python
+spark
+pandas
+pyspark
+airflow
+jupyter notebook
+papermill
+

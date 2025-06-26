@@ -1,14 +1,16 @@
 
-CREATE DATABASE IF NOT EXISTS RETAIL_SALES_DATA;
+CREATE DATABASE IF NOT EXISTS RETAIL_DB;
 
-USE DATABASE RETAIL_SALES_DATA;
+USE DATABASE RETAIL_DB;
 
-CREATE SCHEMA IF NOT EXISTS SALES_WAREHOUSE;
+CREATE SCHEMA IF NOT EXISTS SALES_WH;
 
-USE SCHEMA SALES_WAREHOUSE;
+USE SCHEMA SALES_WH;
+
 
 
 CREATE OR REPLACE STAGE RETAIL_SALES_STAGE;
+
 
 --DROP TABLE IF EXISTS fact_sales;
 --DROP TABLE IF EXISTS dim_order;
@@ -32,8 +34,7 @@ CREATE TABLE IF NOT EXISTS dim_order (
 CREATE TABLE IF NOT EXISTS dim_product (
     product_key INT PRIMARY KEY,
     product_id STRING,
-    product_line INT,
-    price_each FLOAT,
+    product_line VARCHAR,
     msrp FLOAT
 );
 
@@ -66,6 +67,7 @@ CREATE TABLE IF NOT EXISTS fact_sales (
     customer_key INT,
     date_key INT,
     quantity INT,
+    price_each FLOAT,
     total_price FLOAT,
 
     FOREIGN KEY (order_key) REFERENCES dim_order(order_key),
