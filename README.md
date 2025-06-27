@@ -9,5 +9,3 @@ This is an end-to-end data engineering project that ingests, processes, and load
 - **Orchestration:** Airflow pipelines
 
 
-## Getting Started
-
